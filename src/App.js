@@ -8,7 +8,7 @@ import {
 import LoginPage from "./authPages/LoginPage/LoginPage";
 import RegisterPage from "./authPages/RegisterPage/RegisterPage";
 import Dashboard from "./Dashboard/Dashboard";
-// import AlertNotification from "./shared/components/AlertNotification";
+import AlertNotification from "./shared/components/AlertNotification";
 
 import "./App.css";
 
@@ -23,11 +23,12 @@ function App() {
 
           <Route exact path="/dashboard" element={<Dashboard />} />
 
-          <Route path="/" element={<Navigate to="/dashboard" />} />
-          {/* <Navigate to="" element={<Dashboard />} /> */}
+          <Route path="/" element={<Dashboard />} />
+          {/* <Navigate to="/dashboard" /> */}
+          {/* <Navigate to="" element={} /> */}
         </Routes>
       </Router>
-      {/* <AlertNotification /> */}
+      <AlertNotification />
     </>
   );
 }
