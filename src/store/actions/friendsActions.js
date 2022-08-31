@@ -16,12 +16,12 @@ export const getActions = (dispatch) => {
   };
 };
 
-// export const setPendingFriendsInvitations = (pendingFriendsInvitations) => {
-//   return {
-//     type: friendsActions.SET_PENDING_FRIENDS_INVITATIONS,
-//     pendingFriendsInvitations,
-//   };
-// };
+export const setPendingFriendsInvitations = (pendingFriendsInvitations) => {
+  return {
+    type: friendsActions.SET_PENDING_FRIENDS_INVITATIONS,
+    pendingFriendsInvitations,
+  };
+};
 
 // export const setFriends = (friends) => {
 //   return {
