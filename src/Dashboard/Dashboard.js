@@ -18,7 +18,7 @@ const Wrapper = styled("div")({
 const Dashboard = ({ setUserDetails }) => {
   useEffect(() => {
     const userDetails = localStorage.getItem("user");
-
+    // console.log(userDetails);
     if (!userDetails) {
       logout();
     } else {
