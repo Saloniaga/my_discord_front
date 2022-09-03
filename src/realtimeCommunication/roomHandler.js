@@ -17,7 +17,7 @@ export const createNewRoom = () => {
 
   //     const audioOnly = store.getState().room.audioOnly;
   //     store.dispatch(setIsUserJoinedOnlyWithAudio(audioOnly));
-  // socketConnection.createNewRoom();
+  socketConnection.createNewRoom();
   //   };
 
   //   const audioOnly = store.getState().room.audioOnly;
