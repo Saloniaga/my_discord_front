@@ -21,16 +21,16 @@ const reducer = (state = initState, action) => {
         isUserInRoom: action.isUserInRoom,
         isUserRoomCreator: action.isUserRoomCreator,
       };
-    //     case roomActions.SET_ROOM_DETAILS:
-    //       return {
-    //         ...state,
-    //         roomDetails: action.roomDetails,
-    //       };
-    //     case roomActions.SET_ACTIVE_ROOMS:
-    //       return {
-    //         ...state,
-    //         activeRooms: action.activeRooms,
-    //       };
+    case roomActions.SET_ROOM_DETAILS:
+      return {
+        ...state,
+        roomDetails: action.roomDetails,
+      };
+    case roomActions.SET_ACTIVE_ROOMS:
+      return {
+        ...state,
+        activeRooms: action.activeRooms,
+      };
     //     case roomActions.SET_LOCAL_STREAM:
     //       return {
     //         ...state,

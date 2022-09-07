@@ -43,13 +43,13 @@ export const connectWithSocketServer = (userDetails) => {
     updateDirectChatHistoryIfActive(data);
   });
   socket.on("room-create", (data) => {
-    console.log("room created");
-    // roomHandler.newRoomCreated(data);
+    // console.log("room details from server");
+    roomHandler.newRoomCreated(data);
   });
 
-  // socket.on("active-rooms", (data) => {
-  //   roomHandler.updateActiveRooms(data);
-  // });
+  socket.on("active-rooms", (data) => {
+    roomHandler.updateActiveRooms(data);
+  });
 };
 
 export const sendDirectMessage = (data) => {
