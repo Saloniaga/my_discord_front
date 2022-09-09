@@ -82,7 +82,7 @@ export const leaveRoom = () => {
   //   }
 
   //   store.dispatch(setRemoteStreams([]));
-  //   webRTCHandler.closeAllConnections();
+  webRTCHandler.closeAllConnections();
 
   socketConnection.leaveRoom({ roomId });
   store.dispatch(setRoomDetails(null));
