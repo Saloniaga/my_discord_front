@@ -9,19 +9,23 @@ import {
   //   setIsUserJoinedOnlyWithAudio,
 } from "../store/actions/roomActions";
 import * as socketConnection from "./socketConnection";
-// import * as webRTCHandler from "./webRTCHandler";
+import * as webRTCHandler from "./webRTCHandler";
 
 export const createNewRoom = () => {
-  //   const successCalbackFunc = () => {
-  store.dispatch(setOpenRoom(true, true));
+  const successCalbackFunc = () => {
+    store.dispatch(setOpenRoom(true, true));
 
-  //     const audioOnly = store.getState().room.audioOnly;
-  //     store.dispatch(setIsUserJoinedOnlyWithAudio(audioOnly));
-  socketConnection.createNewRoom();
-  //   };
+    //     const audioOnly = store.getState().room.audioOnly;
+    //     store.dispatch(setIsUserJoinedOnlyWithAudio(audioOnly));
+    socketConnection.createNewRoom();
+  };
 
   //   const audioOnly = store.getState().room.audioOnly;
-  //   webRTCHandler.getLocalStreamPreview(audioOnly, successCalbackFunc);
+  webRTCHandler.getLocalStreamPreview(
+    // audioOnly
+    false,
+    successCalbackFunc
+  );
 };
 
 export const newRoomCreated = (data) => {

@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "@mui/system";
-// import { connect } from "react-redux";
-// import Video from "./Video";
+import { connect } from "react-redux";
+import Video from "./Video";
 
 const MainContainer = styled("div")({
   height: "85%",
@@ -10,31 +10,31 @@ const MainContainer = styled("div")({
   flexWrap: "wrap",
 });
 
-const VideosContainer = (
-  {
-    //   localStream,
-    //   remoteStreams,
-    //   screenSharingStream,
-  }
-) => {
+const VideosContainer = ({
+  localStream,
+  //   remoteStreams,
+  //   screenSharingStream,
+}) => {
   return (
     <MainContainer>
-      {/* <Video
-        stream={screenSharingStream ? screenSharingStream : localStream}
+      <Video
+        stream={
+          // screenSharingStream ? screenSharingStream :
+          localStream
+        }
         isLocalStream
       />
-      {remoteStreams.map((stream) => (
+      {/* {remoteStreams.map((stream) => (
         <Video stream={stream} key={stream.id} />
       ))} */}
     </MainContainer>
   );
 };
 
-// const mapStoreStateToProps = ({ room }) => {
-//   return {
-//     ...room,
-//   };
-// };
+const mapStoreStateToProps = ({ room }) => {
+  return {
+    ...room,
+  };
+};
 
-export default VideosContainer;
-// connect(mapStoreStateToProps)(VideosContainer);
+export default connect(mapStoreStateToProps)(VideosContainer);
