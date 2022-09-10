@@ -37,6 +37,10 @@ Install dependencies
 ```
 ## Screenshots
 
+The Login & Register Page.
+
+![homepage](assets/login.png)
+
 The homepage has a sidebar with the list of your friends and the pending friends invitation.
 
 ![homepage](src/assets/homepage.png)
