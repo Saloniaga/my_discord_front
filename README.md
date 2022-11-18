@@ -39,7 +39,7 @@ Install dependencies
 
 The Login & Register Page.
 
-![homepage](assets/login.png)
+![homepage](src/assets/login.png)
 
 The homepage has a sidebar with the list of your friends and the pending friends invitation.
 
